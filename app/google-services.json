@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "522814181367",
+    "project_id": "cimsi-topico-cinco",
+    "storage_bucket": "cimsi-topico-cinco.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522814181367:android:7a0aa74f6dd80270b6e8f2",
+        "android_client_info": {
+          "package_name": "com.cimsi.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "522814181367-n1ka657b65c5257vnqomrcff0rl13til.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAo4aS4mqBbHwiKM30L9kdhsUL0TjyeNIE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "522814181367-n1ka657b65c5257vnqomrcff0rl13til.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
