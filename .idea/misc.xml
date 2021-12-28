@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/GitHub/MyApplication/app/src/main/res/layout/activity_app.xml" value="0.176" />
-        <entry key="..\:/GitHub/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
-        <entry key="..\:/GitHub/MyApplication/app/src/main/res/layout/activity_sign_in.xml" value="0.20742753623188406" />
+        <entry key="..\:/GitHub/CityBikesZyrardow/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3828125" />
+        <entry key="..\:/GitHub/CityBikesZyrardow/app/src/main/res/drawable/ic_location.xml" value="0.3828125" />
+        <entry key="..\:/GitHub/CityBikesZyrardow/app/src/main/res/drawable/round_corner.xml" value="0.2703125" />
+        <entry key="..\:/GitHub/CityBikesZyrardow/app/src/main/res/layout/activity_main.xml" value="0.11778115501519756" />
+        <entry key="..\:/GitHub/CityBikesZyrardow/app/src/main/res/layout/bottom_sheet_rack_details.xml" value="0.1" />
+        <entry key="..\:/GitHub/CityBikesZyrardow/app/src/main/res/layout/marker_details.xml" value="0.2653985507246377" />
       </map>
     </option>
   </component>

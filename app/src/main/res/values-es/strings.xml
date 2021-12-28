@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CIMSI - Tópico 5</string>
+    <string name="network_error">Ha surgido un error a la hora de obtener información sobre las estaciones…</string>
+    <string name="station_description">Hay %1d bici libre y %2d parkings libres.</string>
+    <string name="c_mo_llegar">Cómo llegar</string>
+    <string name="free_bikes">Bicis libres:</string>
+    <string name="empty_slots">Parking libres:</string>
+</resources>
