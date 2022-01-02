@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        actionBar!!.title="ssafasf"
         injectDependencies()
         presenter.attach(this)
         requestPermissions()
