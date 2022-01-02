@@ -665,11 +665,11 @@ drawable btn_radio_on_to_off_mtrl_animation
 drawable center
 drawable ic_launcher_background
 drawable ic_launcher_foreground
-drawable ic_location
 drawable ic_menu_compass
 drawable ic_menu_mapmode
 drawable ic_menu_mylocation
 drawable ic_menu_offline
+drawable location
 drawable marker_default
 drawable marker_default_focused_base
 drawable moreinfo_arrow

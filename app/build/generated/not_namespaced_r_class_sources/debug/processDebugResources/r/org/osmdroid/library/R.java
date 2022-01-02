@@ -15,10 +15,10 @@ public final class R {
         public static final int bonuspack_bubble = 0x7f060058;
         public static final int btn_moreinfo = 0x7f06005d;
         public static final int center = 0x7f060062;
-        public static final int ic_menu_compass = 0x7f060066;
-        public static final int ic_menu_mapmode = 0x7f060067;
-        public static final int ic_menu_mylocation = 0x7f060068;
-        public static final int ic_menu_offline = 0x7f060069;
+        public static final int ic_menu_compass = 0x7f060065;
+        public static final int ic_menu_mapmode = 0x7f060066;
+        public static final int ic_menu_mylocation = 0x7f060067;
+        public static final int ic_menu_offline = 0x7f060068;
         public static final int marker_default = 0x7f06006a;
         public static final int marker_default_focused_base = 0x7f06006b;
         public static final int moreinfo_arrow = 0x7f06006c;
