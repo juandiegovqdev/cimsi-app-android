@@ -664,11 +664,11 @@ int drawable btn_radio_on_to_off_mtrl_animation 0x7f060061
 int drawable center 0x7f060062
 int drawable ic_launcher_background 0x7f060063
 int drawable ic_launcher_foreground 0x7f060064
-int drawable ic_location 0x7f060065
-int drawable ic_menu_compass 0x7f060066
-int drawable ic_menu_mapmode 0x7f060067
-int drawable ic_menu_mylocation 0x7f060068
-int drawable ic_menu_offline 0x7f060069
+int drawable ic_menu_compass 0x7f060065
+int drawable ic_menu_mapmode 0x7f060066
+int drawable ic_menu_mylocation 0x7f060067
+int drawable ic_menu_offline 0x7f060068
+int drawable location 0x7f060069
 int drawable marker_default 0x7f06006a
 int drawable marker_default_focused_base 0x7f06006b
 int drawable moreinfo_arrow 0x7f06006c

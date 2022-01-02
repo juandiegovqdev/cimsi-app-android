@@ -40,9 +40,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.cimsi.project.ui.MainActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar" >
+        <activity android:name="com.cimsi.project.ui.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

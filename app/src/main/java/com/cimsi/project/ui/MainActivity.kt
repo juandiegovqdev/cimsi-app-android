@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        actionBar!!.title="ssafasf"
         injectDependencies()
         presenter.attach(this)
         requestPermissions()
@@ -105,7 +106,7 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
 
     private fun createMarker(station: Station) = Marker(map).apply {
         position = GeoPoint(station.latitude, station.longitude)
-        icon = resources.getDrawable(R.drawable.ic_location, null)
+        icon = resources.getDrawable(R.drawable.location, null)
         setOnMarkerClickListener { marker, mapView ->
             val markerDetailsDialog = MarkerDetailsDialog()
             if (station.name.contains("_")) {
