@@ -34,6 +34,9 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
         presenter.attach(this)
         requestPermissions()
         configureMap()
+
+        // AdMob banner id: ca-app-pub-5467669858609367/5422714505
+        // For testing purposes: ca-app-pub-3940256099942544/6300978111
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
