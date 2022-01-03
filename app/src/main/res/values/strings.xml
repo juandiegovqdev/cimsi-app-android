@@ -5,4 +5,6 @@
     <string name="c_mo_llegar">Cómo llegar</string>
     <string name="free_bikes">Free bikes:</string>
     <string name="empty_slots">Empty slots:</string>
+    <string name="mis_estaciones">Mis estaciones</string>
+    <string name="sobre_la_app">Sobre la app</string>
 </resources>

@@ -2,6 +2,8 @@ package com.cimsi.project.ui
 
 import android.Manifest
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -32,6 +34,23 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
         presenter.attach(this)
         requestPermissions()
         configureMap()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
+        R.id.action_about_the_app -> {
+            println("CLICKED!")
+            true
+        }
+        R.id.action_my_parking -> {
+            println("CLICKED!")
+            true
+        }
+        else -> super.onOptionsItemSelected(item)
     }
 
     private fun injectDependencies() {
