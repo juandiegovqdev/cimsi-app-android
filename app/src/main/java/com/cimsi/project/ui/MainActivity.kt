@@ -43,11 +43,15 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
         R.id.action_about_the_app -> {
-            println("CLICKED!")
+            println("About the app option clicked!")
             true
         }
         R.id.action_my_parking -> {
-            println("CLICKED!")
+            println("My parking option clicked!")
+            true
+        }
+        R.id.action_github -> {
+            println("GitHub option clicked!")
             true
         }
         else -> super.onOptionsItemSelected(item)
