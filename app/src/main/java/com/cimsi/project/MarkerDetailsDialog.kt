@@ -1,11 +1,14 @@
 package com.cimsi.project
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import kotlinx.android.synthetic.main.marker_details.view.*
+
 
 class MarkerDetailsDialog : DialogFragment() {
 
@@ -34,6 +37,11 @@ class MarkerDetailsDialog : DialogFragment() {
     private fun goToLocation() {
         println("Latitude: $latitude")
         println("Longitude: $longitude")
+        val lat = latitude.toString().replace(",", ".")
+        val lon = longitude.toString().replace(",", ".")
+        val uri = "http://maps.google.com/maps?daddr=$lat,$lon"
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(uri))
+        startActivity(intent)
     }
 
     override fun onStart() {
