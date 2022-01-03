@@ -4,9 +4,10 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/44168e0e94c78720ebfb159d444a90a6/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9dc1b6e67c605eafb2ad4df311800428/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/70adbe5c4720849852fa82bb3f0a0342/sentry-android-ndk-5.5.2/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8785bb59e14fe872cc168d8be6a1ae14/sentry-android-ndk-5.5.2/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8785bb59e14fe872cc168d8be6a1ae14/sentry-android-ndk-5.5.2/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8785bb59e14fe872cc168d8be6a1ae14/sentry-android-ndk-5.5.2/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ee24bb4220a25e8f142120ab9eaa1885/sentry-android-ndk-5.5.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ee24bb4220a25e8f142120ab9eaa1885/sentry-android-ndk-5.5.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ee24bb4220a25e8f142120ab9eaa1885/sentry-android-ndk-5.5.2/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.sentry/sentry-android-ndk/5.5.2/ba5d068f67a604f4e3ebeb05372e2a27c2cfc712/sentry-android-ndk-5.5.2-javadoc.jar!/" />

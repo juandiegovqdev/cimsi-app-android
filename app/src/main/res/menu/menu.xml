@@ -13,4 +13,8 @@
         android:id="@+id/action_about_the_app"
         android:title="@string/sobre_la_app"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_log_out"
+        android:title="@string/cerrar_sesi_n"
+        app:showAsAction="never" />
 </menu>

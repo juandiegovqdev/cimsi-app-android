@@ -3,9 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <androidx.appcompat.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/name"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:textAlignment="center"
@@ -14,7 +14,22 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="TEXT" />
+
+    <androidx.appcompat.widget.AppCompatTextView xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        tools:text="TEXT" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/parking_icon"
@@ -26,7 +41,7 @@
         android:src="@drawable/parking"
         app:layout_constraintEnd_toStartOf="@+id/text_empty_slots"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/address" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_empty_slots"
@@ -39,7 +54,7 @@
         android:textColor="@android:color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/parking_icon"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/address" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/empty_slots"
@@ -51,7 +66,7 @@
         android:textColor="@android:color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/text_empty_slots"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/address" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/free_bikes_icon"
@@ -76,7 +91,6 @@
         android:textColor="@android:color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/free_bikes_icon"
-
         app:layout_constraintTop_toBottomOf="@+id/text_empty_slots" />
 
     <androidx.appcompat.widget.AppCompatTextView

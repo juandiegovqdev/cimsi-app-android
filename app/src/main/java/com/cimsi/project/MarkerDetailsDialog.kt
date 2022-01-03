@@ -15,6 +15,7 @@ class MarkerDetailsDialog : DialogFragment() {
     var emptySlots = ""
     var freeBikes = ""
     var name = ""
+    var address = ""
     var latitude: Double? = null
     var longitude: Double? = null
 
@@ -28,6 +29,7 @@ class MarkerDetailsDialog : DialogFragment() {
         inflateDialog.empty_slots.text = emptySlots
         inflateDialog.free_bikes.text = freeBikes
         inflateDialog.name.text = name
+        inflateDialog.address.text = address
         inflateDialog.btn_go_to_station.setOnClickListener {
             goToLocation()
         }

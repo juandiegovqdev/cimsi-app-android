@@ -4,9 +4,10 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7476f7aab711ec12bdae28ca50c4c35a/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cded8c20ac3b4845c1ad4a46b406aa29/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c2bbbe807040d10d0040bee67db0466/play-services-appset-16.0.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2596cfbc7d3c6d6fdcddfb49582cdfce/play-services-appset-16.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2596cfbc7d3c6d6fdcddfb49582cdfce/play-services-appset-16.0.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2596cfbc7d3c6d6fdcddfb49582cdfce/play-services-appset-16.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5dbcbf5e9be71156f25eca59b3f6c619/play-services-appset-16.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5dbcbf5e9be71156f25eca59b3f6c619/play-services-appset-16.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5dbcbf5e9be71156f25eca59b3f6c619/play-services-appset-16.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-appset/16.0.0/8cd9011920c394af16ca93e693a993705090787a/play-services-appset-16.0.0-javadoc.jar!/" />

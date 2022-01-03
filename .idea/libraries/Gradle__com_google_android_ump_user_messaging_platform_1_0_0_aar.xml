@@ -5,8 +5,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6c6dad7707b4be3496a86b69916db019/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5d83c236ff3832a087501c455f910258/user-messaging-platform-1.0.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cac26f7fb596d05d3debfcd5009c937e/user-messaging-platform-1.0.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cac26f7fb596d05d3debfcd5009c937e/user-messaging-platform-1.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cac26f7fb596d05d3debfcd5009c937e/user-messaging-platform-1.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/21390414e01996521fa9201c5fc840d3/user-messaging-platform-1.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/21390414e01996521fa9201c5fc840d3/user-messaging-platform-1.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/21390414e01996521fa9201c5fc840d3/user-messaging-platform-1.0.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.ump/user-messaging-platform/1.0.0/d735fbf1a7e252ffda813ef2622c3a1ccdd2bb3c/user-messaging-platform-1.0.0-javadoc.jar!/" />

@@ -1,4 +1,4 @@
-#Mon Jan 03 03:46:24 CET 2022
+#Mon Jan 03 04:51:14 CET 2022
 base.2=D\:\\GitHub\\cimsi-app-android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes2.dex
 path.2=classes2.dex
 base.1=D\:\\GitHub\\cimsi-app-android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex

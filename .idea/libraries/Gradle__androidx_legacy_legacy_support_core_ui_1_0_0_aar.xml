@@ -4,9 +4,10 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/45854b5d55817b1e490904a176d2c61a/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8ceb62a0bd4535d7244e74479f59c81b/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0d92d02e9b84437bf963cc84d2dba728/legacy-support-core-ui-1.0.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/71498a7526336def1017201ec86547ba/legacy-support-core-ui-1.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/71498a7526336def1017201ec86547ba/legacy-support-core-ui-1.0.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/71498a7526336def1017201ec86547ba/legacy-support-core-ui-1.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/87b0b6f08913397e65fc4cede10fbe58/legacy-support-core-ui-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/87b0b6f08913397e65fc4cede10fbe58/legacy-support-core-ui-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/87b0b6f08913397e65fc4cede10fbe58/legacy-support-core-ui-1.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

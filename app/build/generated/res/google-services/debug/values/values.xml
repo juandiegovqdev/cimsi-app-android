@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">522814181367-n1ka657b65c5257vnqomrcff0rl13til.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">522814181367</string>
+    <string name="google_api_key" translatable="false">AIzaSyAo4aS4mqBbHwiKM30L9kdhsUL0TjyeNIE</string>
+    <string name="google_app_id" translatable="false">1:522814181367:android:8dafa93eb553101fb6e8f2</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAo4aS4mqBbHwiKM30L9kdhsUL0TjyeNIE</string>
+    <string name="google_storage_bucket" translatable="false">cimsi-topico-cinco.appspot.com</string>
+    <string name="project_id" translatable="false">cimsi-topico-cinco</string>
+</resources>

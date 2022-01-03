@@ -1,6 +1,7 @@
 package com.cimsi.project.ui
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -19,6 +20,10 @@ import com.cimsi.project.model.Station
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 import org.osmdroid.config.Configuration
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
@@ -32,6 +37,10 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
     @Inject
     lateinit var presenter: MainActivityContract.Presenter
     lateinit var mAdView: AdView
+    lateinit var mGoogleSignInClient: GoogleSignInClient
+    private val auth by lazy {
+        FirebaseAuth.getInstance()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,11 +49,16 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
         presenter.attach(this)
         requestPermissions()
         configureMap()
+
         MobileAds.initialize(this)
         mAdView = findViewById(R.id.adView)
         val adRequest = AdRequest.Builder().build()
         mAdView.loadAd(adRequest)
 
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken("522814181367-0jp1og4om1epljq7r5bard90c8m5lfq7.apps.googleusercontent.com")
+            .build()
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
         // AdMob banner id: ca-app-pub-5467669858609367/5422714505
         // For testing purposes: ca-app-pub-3940256099942544/6300978111
     }
@@ -57,6 +71,14 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
     override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
         R.id.action_about_the_app -> {
             println("About the app option clicked!")
+            true
+        }
+        R.id.action_log_out -> {
+            mGoogleSignInClient.signOut().addOnCompleteListener {
+                val intent = Intent(this, SignInActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
             true
         }
         R.id.action_my_parking -> {
@@ -142,20 +164,27 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
         map.invalidate()
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     private fun createMarker(station: Station) = Marker(map).apply {
         position = GeoPoint(station.latitude, station.longitude)
-        icon = resources.getDrawable(R.drawable.location, null)
+
+        icon = if (station.extra.status == "OPEN") {
+            resources.getDrawable(R.drawable.location_available, null)
+        } else {
+            resources.getDrawable(R.drawable.location, null)
+        }
         setOnMarkerClickListener { marker, mapView ->
             val markerDetailsDialog = MarkerDetailsDialog()
             if (station.name.contains("_")) {
                 markerDetailsDialog.name = station.name.split("_")[1]
             } else {
-                markerDetailsDialog.name = station.name.toString()
+                markerDetailsDialog.name = station.name
             }
             markerDetailsDialog.emptySlots = station.empty_slots.toString()
             markerDetailsDialog.freeBikes = station.free_bikes.toString()
             markerDetailsDialog.latitude = station.latitude
             markerDetailsDialog.longitude = station.longitude
+            markerDetailsDialog.address = station.extra.address
             showMarkerDetails(markerDetailsDialog)
             true
         }

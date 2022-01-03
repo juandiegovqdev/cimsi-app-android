@@ -20,5 +20,11 @@ data class Station(
     var latitude: Double,
     var longitude: Double,
     var empty_slots: Int,
-    var free_bikes: Int
+    var free_bikes: Int,
+    var extra: Extra
+)
+
+data class Extra(
+    var address: String,
+    var status: String
 )
