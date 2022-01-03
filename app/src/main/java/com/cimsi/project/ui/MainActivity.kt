@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
     private val auth by lazy {
         FirebaseAuth.getInstance()
     }
-    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
