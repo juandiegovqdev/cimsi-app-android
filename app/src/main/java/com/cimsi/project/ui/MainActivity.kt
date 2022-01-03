@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
     private val auth by lazy {
         FirebaseAuth.getInstance()
     }
-
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -49,18 +49,24 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
         presenter.attach(this)
         requestPermissions()
         configureMap()
+        initializeAdMob()
+        initializeGoogleSignIn()
+    }
 
-        MobileAds.initialize(this)
-        mAdView = findViewById(R.id.adView)
-        val adRequest = AdRequest.Builder().build()
-        mAdView.loadAd(adRequest)
-
+    private fun initializeGoogleSignIn() {
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken("522814181367-0jp1og4om1epljq7r5bard90c8m5lfq7.apps.googleusercontent.com")
             .build()
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
         // AdMob banner id: ca-app-pub-5467669858609367/5422714505
         // For testing purposes: ca-app-pub-3940256099942544/6300978111
+    }
+
+    private fun initializeAdMob() {
+        MobileAds.initialize(this)
+        mAdView = findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -167,7 +173,6 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
     @SuppressLint("UseCompatLoadingForDrawables")
     private fun createMarker(station: Station) = Marker(map).apply {
         position = GeoPoint(station.latitude, station.longitude)
-
         icon = if (station.extra.status == "OPEN") {
             resources.getDrawable(R.drawable.location_available, null)
         } else {

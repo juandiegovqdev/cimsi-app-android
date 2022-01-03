@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.SignInActivity"
+            android:name=".ui.App"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
@@ -23,6 +23,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.SignInActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true" />
 
         <meta-data
             android:name="io.sentry.dsn"
@@ -30,12 +37,9 @@
         <meta-data
             android:name="io.sentry.traces.sample-rate"
             android:value="1.0" />
-
-        <activity
-            android:name=".ui.MainActivity"
-            android:exported="true"></activity>
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-5467669858609367~7460229649" />
     </application>
+
 </manifest>

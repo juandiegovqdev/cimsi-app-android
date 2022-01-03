@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.cimsi.project.R
+import com.cimsi.project.services.Config
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -24,17 +25,27 @@ class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
+        initializeVariables()
+        initializeUIObjects()
+        initializeListeners()
+    }
 
-        // Configure Google Sign In inside onCreate mentod
+    private fun initializeVariables() {
+        // Configuramos Google Sign In dentro del método onCreate
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken("522814181367-0jp1og4om1epljq7r5bard90c8m5lfq7.apps.googleusercontent.com")
             .build()
-// getting the value of gso inside the GoogleSigninClient
+        // Getting the value of gso inside the GoogleSigninClient
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
-// initialize the firebaseAuth variable
+        // Inicializamos la variable firebaseAuth
         firebaseAuth = FirebaseAuth.getInstance()
+    }
 
+    private fun initializeUIObjects() {
         sign_in_button.setSize(SignInButton.SIZE_STANDARD)
+    }
+
+    private fun initializeListeners() {
         sign_in_button.setOnClickListener {
             signInGoogle()
         }
@@ -57,7 +68,13 @@ class SignInActivity : AppCompatActivity() {
         try {
             val account: GoogleSignInAccount? = completedTask.getResult(ApiException::class.java)
             if (account != null) {
-                // UpdateUI(account)
+                Config.account = GoogleSignIn.getLastSignedInAccount(this)!!.account.toString()
+                Config.id = GoogleSignIn.getLastSignedInAccount(this)!!.id
+                Config.displayName = GoogleSignIn.getLastSignedInAccount(this)!!.displayName
+                Config.email = GoogleSignIn.getLastSignedInAccount(this)!!.email
+                Config.familyName = GoogleSignIn.getLastSignedInAccount(this)!!.familyName
+                Config.givenName = GoogleSignIn.getLastSignedInAccount(this)!!.givenName
+                Config.photoUrl = GoogleSignIn.getLastSignedInAccount(this)!!.photoUrl.toString()
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
             }
@@ -69,8 +86,15 @@ class SignInActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         if (GoogleSignIn.getLastSignedInAccount(this) != null) {
-            // startActivity(Intent(this, MainActivity::class.java))
-            // finish()
+            Config.account = GoogleSignIn.getLastSignedInAccount(this)!!.account.toString()
+            Config.id = GoogleSignIn.getLastSignedInAccount(this)!!.id
+            Config.displayName = GoogleSignIn.getLastSignedInAccount(this)!!.displayName
+            Config.email = GoogleSignIn.getLastSignedInAccount(this)!!.email
+            Config.familyName = GoogleSignIn.getLastSignedInAccount(this)!!.familyName
+            Config.givenName = GoogleSignIn.getLastSignedInAccount(this)!!.givenName
+            Config.photoUrl = GoogleSignIn.getLastSignedInAccount(this)!!.photoUrl.toString()
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
     }
 }
