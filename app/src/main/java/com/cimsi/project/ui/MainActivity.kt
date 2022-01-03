@@ -1,6 +1,8 @@
 package com.cimsi.project.ui
 
 import android.Manifest
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -14,6 +16,9 @@ import com.cimsi.project.api.NetworkId
 import com.cimsi.project.dependencies.BikesApiModule
 import com.cimsi.project.dependencies.DaggerActivityComponent
 import com.cimsi.project.model.Station
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import kotlinx.android.synthetic.main.activity_main.*
 import org.osmdroid.config.Configuration
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
@@ -26,6 +31,7 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
 
     @Inject
     lateinit var presenter: MainActivityContract.Presenter
+    lateinit var mAdView: AdView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +40,10 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
         presenter.attach(this)
         requestPermissions()
         configureMap()
+        MobileAds.initialize(this)
+        mAdView = findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
 
         // AdMob banner id: ca-app-pub-5467669858609367/5422714505
         // For testing purposes: ca-app-pub-3940256099942544/6300978111
@@ -54,7 +64,10 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
             true
         }
         R.id.action_github -> {
-            println("GitHub option clicked!")
+            val url = "https://github.com/juandiegovqdev/cimsi-app-android"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(url)
+            startActivity(intent)
             true
         }
         else -> super.onOptionsItemSelected(item)

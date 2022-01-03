@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: io.sentry:sentry-android:5.5.2@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5f4325bbe17a9808a087f8f728709b9c/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4203c09cb979b5d622a15e2379c39396/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2182f44e9b9d42960f2bb5a8363ceb00/sentry-android-5.5.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/77ddd496542058eda22640d2e9e6bb9e/sentry-android-5.5.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/77ddd496542058eda22640d2e9e6bb9e/sentry-android-5.5.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/77ddd496542058eda22640d2e9e6bb9e/sentry-android-5.5.2/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.sentry/sentry-android/5.5.2/48649eceb337100a313a00285f2b18e4142bbd06/sentry-android-5.5.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.sentry/sentry-android/5.5.2/48649eceb337100a313a00285f2b18e4142bbd06/sentry-android-5.5.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

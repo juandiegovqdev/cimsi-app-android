@@ -2,10 +2,10 @@
     <string name="app_name">CIMSI - 5th Topic</string>
     <string name="network_error">Loading city bikes network failed.</string>
     <string name="station_description">There are %1d free bikes and %2d empty slots.</string>
-    <string name="c_mo_llegar">Cómo llegar</string>
+    <string name="c_mo_llegar">Go there</string>
     <string name="free_bikes">Free bikes:</string>
     <string name="empty_slots">Empty slots:</string>
-    <string name="mis_estaciones">Mis estaciones</string>
-    <string name="sobre_la_app">Sobre la app</string>
+    <string name="mis_estaciones">My parking stations</string>
+    <string name="sobre_la_app">About the app</string>
     <string name="github">GitHub</string>
 </resources>
