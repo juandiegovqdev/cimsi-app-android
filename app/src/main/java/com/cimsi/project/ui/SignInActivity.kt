@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.cimsi.project.R
-import com.cimsi.project.services.Config
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -35,7 +34,7 @@ class SignInActivity : AppCompatActivity() {
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken("522814181367-0jp1og4om1epljq7r5bard90c8m5lfq7.apps.googleusercontent.com")
             .build()
-        // Getting the value of gso inside the GoogleSigninClient
+        // Obtenemos el valor de gso dentro de GoogleSigninClient
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
         // Inicializamos la variable firebaseAuth
         firebaseAuth = FirebaseAuth.getInstance()
@@ -68,33 +67,17 @@ class SignInActivity : AppCompatActivity() {
         try {
             val account: GoogleSignInAccount? = completedTask.getResult(ApiException::class.java)
             if (account != null) {
-                Config.account = GoogleSignIn.getLastSignedInAccount(this)!!.account.toString()
-                Config.id = GoogleSignIn.getLastSignedInAccount(this)!!.id
-                Config.displayName = GoogleSignIn.getLastSignedInAccount(this)!!.displayName
-                Config.email = GoogleSignIn.getLastSignedInAccount(this)!!.email
-                Config.familyName = GoogleSignIn.getLastSignedInAccount(this)!!.familyName
-                Config.givenName = GoogleSignIn.getLastSignedInAccount(this)!!.givenName
-                Config.photoUrl = GoogleSignIn.getLastSignedInAccount(this)!!.photoUrl.toString()
+                // Config.id = GoogleSignIn.getLastSignedInAccount(this)!!.id
+                // Config.displayName = GoogleSignIn.getLastSignedInAccount(this)!!.displayName
+                // Config.email = GoogleSignIn.getLastSignedInAccount(this)!!.email
+                // Config.familyName = GoogleSignIn.getLastSignedInAccount(this)!!.familyName
+                // Config.givenName = GoogleSignIn.getLastSignedInAccount(this)!!.givenName
+                // Config.photoUrl = GoogleSignIn.getLastSignedInAccount(this)!!.photoUrl.toString()
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
             }
         } catch (e: ApiException) {
             Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show()
-        }
-    }
-
-    override fun onStart() {
-        super.onStart()
-        if (GoogleSignIn.getLastSignedInAccount(this) != null) {
-            Config.account = GoogleSignIn.getLastSignedInAccount(this)!!.account.toString()
-            Config.id = GoogleSignIn.getLastSignedInAccount(this)!!.id
-            Config.displayName = GoogleSignIn.getLastSignedInAccount(this)!!.displayName
-            Config.email = GoogleSignIn.getLastSignedInAccount(this)!!.email
-            Config.familyName = GoogleSignIn.getLastSignedInAccount(this)!!.familyName
-            Config.givenName = GoogleSignIn.getLastSignedInAccount(this)!!.givenName
-            Config.photoUrl = GoogleSignIn.getLastSignedInAccount(this)!!.photoUrl.toString()
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
         }
     }
 }

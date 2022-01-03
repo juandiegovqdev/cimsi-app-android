@@ -50,6 +50,8 @@ dependencies {
     implementation 'org.osmdroid:osmdroid-android:6.1.2'
     implementation 'io.sentry:sentry-android:5.5.2'
     implementation 'com.google.android.gms:play-services-ads:20.5.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'androidx.cardview:cardview:1.0.0'
     testImplementation 'junit:junit:4.12'
     testImplementation 'androidx.arch.core:core-testing:2.0.1'
     testImplementation 'org.mockito:mockito-core:2.28.2'
