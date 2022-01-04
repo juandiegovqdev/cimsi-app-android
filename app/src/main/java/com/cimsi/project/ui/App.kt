@@ -19,7 +19,7 @@ class App : AppCompatActivity() {
         super.onStart()
         Handler().postDelayed({
             if (GoogleSignIn.getLastSignedInAccount(this) != null) {
-                // Config.id = GoogleSignIn.getLastSignedInAccount(this)!!.id
+                Config.id = GoogleSignIn.getLastSignedInAccount(this)!!.id
                 // Config.displayName = GoogleSignIn.getLastSignedInAccount(this)!!.displayName
                 // Config.email = GoogleSignIn.getLastSignedInAccount(this)!!.email
                 // Config.familyName = GoogleSignIn.getLastSignedInAccount(this)!!.familyName

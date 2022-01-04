@@ -1809,6 +1809,8 @@ drawable round_corner
 drawable round_navigation_white_48
 drawable sharp_add_black_36
 drawable sharp_remove_black_36
+drawable star_not_selected
+drawable star_selected
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1915,6 +1917,7 @@ id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
 id btn_go_to_station
+id btn_save_station
 id bubble_description
 id bubble_image
 id bubble_moreinfo
@@ -2027,6 +2030,8 @@ id info
 id invisible
 id inward
 id italic
+id item_station_address_text_view
+id item_station_name_text_view
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
@@ -2134,6 +2139,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyclerView
 id reverseSawtooth
 id right
 id rightToLeft
@@ -2332,6 +2338,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_app
+layout activity_favorite_stations
 layout activity_main
 layout activity_sign_in
 layout bonuspack_bubble
@@ -2353,6 +2360,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout item_fav_station
 layout marker_details
 layout material_chip_input_combo
 layout material_clock_display

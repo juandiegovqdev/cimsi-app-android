@@ -7,11 +7,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
+import com.cimsi.project.services.Config
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.marker_details.view.*
 
 
 class MarkerDetailsDialog : DialogFragment() {
 
+    val db = Firebase.firestore
     var emptySlots = ""
     var freeBikes = ""
     var name = ""
@@ -30,6 +34,39 @@ class MarkerDetailsDialog : DialogFragment() {
         inflateDialog.free_bikes.text = freeBikes
         inflateDialog.name.text = name
         inflateDialog.address.text = address
+        if (Config.stationsLatitude.contains(latitude.toString()) && Config.stationsLongitude.contains(
+                longitude.toString()
+            )
+        ) {
+            inflateDialog.btn_save_station.setImageResource(R.drawable.star_selected)
+        } else {
+            inflateDialog.btn_save_station.setImageResource(R.drawable.star_not_selected)
+        }
+        inflateDialog.btn_save_station.setOnClickListener {
+            if (!Config.stationsLatitude.contains(latitude.toString()) && !Config.stationsLongitude.contains(
+                    longitude.toString()
+                )
+            ) {
+                val station = hashMapOf(
+                    "id" to Config.id,
+                    "name" to name,
+                    "address" to address,
+                    "latitude" to latitude,
+                    "longitude" to longitude
+                )
+                db.collection("favorite_stations")
+                    .add(station)
+                    .addOnSuccessListener { documentReference ->
+                        inflateDialog.btn_save_station.setImageResource(R.drawable.star_selected)
+                        Config.stationsLatitude.add(latitude.toString())
+                        Config.stationsLongitude.add(longitude.toString())
+                        println("DocumentSnapshot added with ID: ${documentReference.id}")
+                    }
+                    .addOnFailureListener { e ->
+                        println("Error adding document")
+                    }
+            }
+        }
         inflateDialog.btn_go_to_station.setOnClickListener {
             goToLocation()
         }

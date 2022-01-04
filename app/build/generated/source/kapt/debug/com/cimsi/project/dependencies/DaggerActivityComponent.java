@@ -4,6 +4,7 @@ package com.cimsi.project.dependencies;
 import com.cimsi.project.ui.MainActivity;
 import com.cimsi.project.ui.MainActivityPresenter;
 import com.cimsi.project.ui.MainActivity_MembersInjector;
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import dagger.internal.Preconditions;
 
 public final class DaggerActivityComponent implements ActivityComponent {
@@ -38,6 +39,7 @@ public final class DaggerActivityComponent implements ActivityComponent {
     injectMainActivity(activity);
   }
 
+  @CanIgnoreReturnValue
   private MainActivity injectMainActivity(MainActivity instance) {
     MainActivity_MembersInjector.injectPresenter(instance, getMainActivityPresenter());
     return instance;

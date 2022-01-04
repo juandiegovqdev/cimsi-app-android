@@ -1,10 +1,12 @@
 package com.cimsi.project.ui
 
 import android.content.Intent
+import android.graphics.Bitmap
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.cimsi.project.R
+import com.cimsi.project.services.Config
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -67,7 +69,7 @@ class SignInActivity : AppCompatActivity() {
         try {
             val account: GoogleSignInAccount? = completedTask.getResult(ApiException::class.java)
             if (account != null) {
-                // Config.id = GoogleSignIn.getLastSignedInAccount(this)!!.id
+                Config.id = GoogleSignIn.getLastSignedInAccount(this)!!.id
                 // Config.displayName = GoogleSignIn.getLastSignedInAccount(this)!!.displayName
                 // Config.email = GoogleSignIn.getLastSignedInAccount(this)!!.email
                 // Config.familyName = GoogleSignIn.getLastSignedInAccount(this)!!.familyName

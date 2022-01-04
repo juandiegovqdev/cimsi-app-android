@@ -34,22 +34,22 @@ public final class R {
         public static final int round_navigation_white_48 = 0x7f0700c3;
         public static final int sharp_add_black_36 = 0x7f0700c4;
         public static final int sharp_remove_black_36 = 0x7f0700c5;
-        public static final int zoom_in = 0x7f0700c9;
-        public static final int zoom_out = 0x7f0700ca;
+        public static final int zoom_in = 0x7f0700cb;
+        public static final int zoom_out = 0x7f0700cc;
     }
     public static final class id {
         private id() {}
 
-        public static final int bubble_description = 0x7f080065;
-        public static final int bubble_image = 0x7f080066;
-        public static final int bubble_moreinfo = 0x7f080067;
-        public static final int bubble_subdescription = 0x7f080068;
-        public static final int bubble_title = 0x7f080069;
+        public static final int bubble_description = 0x7f080066;
+        public static final int bubble_image = 0x7f080067;
+        public static final int bubble_moreinfo = 0x7f080068;
+        public static final int bubble_subdescription = 0x7f080069;
+        public static final int bubble_title = 0x7f08006a;
     }
     public static final class layout {
         private layout() {}
 
-        public static final int bonuspack_bubble = 0x7f0b001f;
+        public static final int bonuspack_bubble = 0x7f0b0020;
     }
     public static final class string {
         private string() {}

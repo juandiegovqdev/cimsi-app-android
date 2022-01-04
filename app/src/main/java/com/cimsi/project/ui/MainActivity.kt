@@ -16,7 +16,9 @@ import com.cimsi.project.R
 import com.cimsi.project.api.NetworkId
 import com.cimsi.project.dependencies.BikesApiModule
 import com.cimsi.project.dependencies.DaggerActivityComponent
+import com.cimsi.project.model.FavStation
 import com.cimsi.project.model.Station
+import com.cimsi.project.services.Config
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
@@ -24,6 +26,9 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 import org.osmdroid.config.Configuration
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
@@ -38,6 +43,7 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
     lateinit var presenter: MainActivityContract.Presenter
     lateinit var mAdView: AdView
     lateinit var mGoogleSignInClient: GoogleSignInClient
+    val db = Firebase.firestore
     private val auth by lazy {
         FirebaseAuth.getInstance()
     }
@@ -49,8 +55,42 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
         presenter.attach(this)
         requestPermissions()
         configureMap()
+        initializeUIObjects()
         initializeAdMob()
         initializeGoogleSignIn()
+        getFavoriteStationsData()
+    }
+
+    private fun getFavoriteStationsData() {
+        Config.stations = mutableListOf()
+        db.collection("favorite_stations")
+            .get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    Config.stationsQuery = result.query.whereArrayContains("id", Config.id)
+                    println("${document.id} => ${document.data}")
+                    Config.stationsIds.add(document.id)
+                    Config.stationsLatitude.add(document.data["latitude"].toString())
+                    Config.stationsLongitude.add(document.data["longitude"].toString())
+                    Config.stationsName.add(document.data["name"].toString())
+                    Config.stationsAddress.add(document.data["address"].toString())
+                    val s = FavStation()
+                    s.address = document.data["address"].toString()
+                    s.latitude = document.data["latitude"].toString()
+                    s.longitude = document.data["longitude"].toString()
+                    s.name = document.data["name"].toString()
+                    Config.stations.add(s)
+                }
+            }
+            .addOnFailureListener { exception ->
+                println("Error getting documents. Exception: "+exception.localizedMessage.toString())
+            }
+    }
+
+    private fun initializeUIObjects() {
+        if (Config.photoUrl.isNotBlank() && Config.photoUrl.isNotEmpty()) {
+            Picasso.get().load(Config.photoUrl).into(profile_pic)
+        }
     }
 
     private fun initializeGoogleSignIn() {
@@ -75,10 +115,6 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
-        R.id.action_about_the_app -> {
-            println("About the app option clicked!")
-            true
-        }
         R.id.action_log_out -> {
             mGoogleSignInClient.signOut().addOnCompleteListener {
                 val intent = Intent(this, SignInActivity::class.java)
@@ -88,7 +124,8 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
             true
         }
         R.id.action_my_parking -> {
-            println("My parking option clicked!")
+            startActivity(Intent(this, FavoriteStationsActivity::class.java))
+            finish()
             true
         }
         R.id.action_github -> {
