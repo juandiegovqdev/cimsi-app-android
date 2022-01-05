@@ -1,7 +1,7 @@
 package com.cimsi.project
 
 import com.cimsi.project.api.NetworkId
-import com.cimsi.project.ui.MainActivityContract
+import com.cimsi.project.ui.contracts.MainActivityContract
 import kotlinx.coroutines.*
 import kotlinx.coroutines.test.*
 import org.junit.After

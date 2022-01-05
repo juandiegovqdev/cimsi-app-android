@@ -2,6 +2,8 @@
 package com.cimsi.project.ui;
 
 import com.cimsi.project.api.BikesServiceAPI;
+import com.cimsi.project.ui.presenter.MainActivityPresenter;
+
 import dagger.internal.Factory;
 import javax.inject.Provider;
 

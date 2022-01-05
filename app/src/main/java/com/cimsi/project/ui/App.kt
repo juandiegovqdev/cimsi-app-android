@@ -20,15 +20,10 @@ class App : AppCompatActivity() {
         Handler().postDelayed({
             if (GoogleSignIn.getLastSignedInAccount(this) != null) {
                 Config.id = GoogleSignIn.getLastSignedInAccount(this)!!.id
-                // Config.displayName = GoogleSignIn.getLastSignedInAccount(this)!!.displayName
-                // Config.email = GoogleSignIn.getLastSignedInAccount(this)!!.email
-                // Config.familyName = GoogleSignIn.getLastSignedInAccount(this)!!.familyName
-                // Config.givenName = GoogleSignIn.getLastSignedInAccount(this)!!.givenName
                 if (GoogleSignIn.getLastSignedInAccount(this)!!.photoUrl.toString()
                         .isNotEmpty() && GoogleSignIn.getLastSignedInAccount(this)!!.photoUrl.toString()
                         .isNotBlank()
                 ) {
-                    println("Config.photoUrl: ${GoogleSignIn.getLastSignedInAccount(this)!!.photoUrl}")
                     Config.photoUrl =
                         GoogleSignIn.getLastSignedInAccount(this)!!.photoUrl.toString()
                 }

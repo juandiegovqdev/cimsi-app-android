@@ -1,7 +1,8 @@
-package com.cimsi.project.ui
+package com.cimsi.project.ui.contracts
 
 import com.cimsi.project.api.NetworkId
 import com.cimsi.project.model.Station
+import com.cimsi.project.ui.presenter.BasePresenter
 import org.osmdroid.util.GeoPoint
 import java.util.concurrent.TimeUnit
 

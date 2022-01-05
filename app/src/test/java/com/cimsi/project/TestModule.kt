@@ -1,8 +1,8 @@
 package com.cimsi.project
 
 import com.cimsi.project.api.BikesServiceAPI
-import com.cimsi.project.ui.MainActivityContract
-import com.cimsi.project.ui.MainActivityPresenter
+import com.cimsi.project.ui.contracts.MainActivityContract
+import com.cimsi.project.ui.presenter.MainActivityPresenter
 import dagger.Binds
 import dagger.Module
 import dagger.Provides

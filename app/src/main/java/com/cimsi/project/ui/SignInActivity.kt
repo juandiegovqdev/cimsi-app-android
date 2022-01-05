@@ -1,7 +1,6 @@
 package com.cimsi.project.ui
 
 import android.content.Intent
-import android.graphics.Bitmap
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -43,7 +42,7 @@ class SignInActivity : AppCompatActivity() {
     }
 
     private fun initializeUIObjects() {
-        sign_in_button.setSize(SignInButton.SIZE_STANDARD)
+        sign_in_button.setSize(SignInButton.SIZE_WIDE)
     }
 
     private fun initializeListeners() {
@@ -70,11 +69,7 @@ class SignInActivity : AppCompatActivity() {
             val account: GoogleSignInAccount? = completedTask.getResult(ApiException::class.java)
             if (account != null) {
                 Config.id = GoogleSignIn.getLastSignedInAccount(this)!!.id
-                // Config.displayName = GoogleSignIn.getLastSignedInAccount(this)!!.displayName
-                // Config.email = GoogleSignIn.getLastSignedInAccount(this)!!.email
-                // Config.familyName = GoogleSignIn.getLastSignedInAccount(this)!!.familyName
-                // Config.givenName = GoogleSignIn.getLastSignedInAccount(this)!!.givenName
-                // Config.photoUrl = GoogleSignIn.getLastSignedInAccount(this)!!.photoUrl.toString()
+                Config.photoUrl = GoogleSignIn.getLastSignedInAccount(this)!!.photoUrl.toString()
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
             }

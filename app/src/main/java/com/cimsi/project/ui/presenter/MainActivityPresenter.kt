@@ -1,8 +1,9 @@
-package com.cimsi.project.ui
+package com.cimsi.project.ui.presenter
 
 import com.cimsi.project.api.BikesServiceAPI
 import com.cimsi.project.api.NetworkId
 import com.cimsi.project.model.Network
+import com.cimsi.project.ui.contracts.MainActivityContract
 import kotlinx.coroutines.*
 import org.osmdroid.util.GeoPoint
 import java.util.concurrent.TimeUnit

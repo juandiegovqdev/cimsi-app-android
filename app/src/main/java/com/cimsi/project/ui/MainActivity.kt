@@ -19,6 +19,7 @@ import com.cimsi.project.dependencies.DaggerActivityComponent
 import com.cimsi.project.model.FavStation
 import com.cimsi.project.model.Station
 import com.cimsi.project.services.Config
+import com.cimsi.project.ui.contracts.MainActivityContract
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
@@ -83,7 +84,7 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
                 }
             }
             .addOnFailureListener { exception ->
-                println("Error getting documents. Exception: "+exception.localizedMessage.toString())
+                println("Error getting documents. Exception: " + exception.localizedMessage.toString())
             }
     }
 
@@ -233,11 +234,11 @@ class MainActivity : AppCompatActivity(), MainActivityContract.View {
         setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
     }
 
-    override fun showError() = Toast
-        .makeText(this, resources.getText(R.string.network_error), Toast.LENGTH_LONG)
-        .show()
-
     private fun showMarkerDetails(markerDetailsDialog: MarkerDetailsDialog) {
         markerDetailsDialog.show(supportFragmentManager, "MyCustomFragment")
     }
+
+    override fun showError() = Toast
+        .makeText(this, resources.getText(R.string.network_error), Toast.LENGTH_LONG)
+        .show()
 }

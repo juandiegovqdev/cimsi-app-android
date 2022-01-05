@@ -2,7 +2,7 @@
 package com.cimsi.project.dependencies;
 
 import com.cimsi.project.ui.MainActivity;
-import com.cimsi.project.ui.MainActivityPresenter;
+import com.cimsi.project.ui.presenter.MainActivityPresenter;
 import com.cimsi.project.ui.MainActivity_MembersInjector;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import dagger.internal.Preconditions;
