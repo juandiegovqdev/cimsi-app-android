@@ -1,4 +1,4 @@
-package com.cimsi.project.ui
+package com.cimsi.project.ui.activities
 
 import android.content.Intent
 import android.os.Bundle

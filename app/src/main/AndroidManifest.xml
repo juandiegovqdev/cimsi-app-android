@@ -15,10 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.FavoriteStationsActivity"
+            android:name=".ui.activities.FavoriteStationsActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.App"
+            android:name=".ui.activities.App"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
@@ -28,11 +28,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.SignInActivity"
+            android:name=".ui.activities.SignInActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.activities.MainActivity"
             android:exported="true" />
 
         <meta-data

@@ -1,4 +1,4 @@
-package com.cimsi.project.ui
+package com.cimsi.project.ui.activities
 
 import android.Manifest
 import android.annotation.SuppressLint

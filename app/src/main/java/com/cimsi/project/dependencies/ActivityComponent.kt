@@ -1,6 +1,6 @@
 package com.cimsi.project.dependencies
 
-import com.cimsi.project.ui.MainActivity
+import com.cimsi.project.ui.activities.MainActivity
 import dagger.Component
 
 @Component(modules = [BikesApiModule::class, ActivityModule::class])
