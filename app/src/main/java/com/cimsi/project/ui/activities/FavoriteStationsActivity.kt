@@ -10,7 +10,6 @@ import com.cimsi.project.adapters.StationsAdapter
 import com.cimsi.project.services.Config
 import kotlinx.android.synthetic.main.activity_favorite_stations.*
 
-
 class FavoriteStationsActivity : AppCompatActivity() {
 
     private lateinit var stationsAdapter: StationsAdapter
