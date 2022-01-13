@@ -50,7 +50,6 @@ class MainActivityPresenter @Inject constructor(private val bikesApi: BikesServi
         callFailed("Response is not available.")
     }
 
-
     override fun scheduleStationsUpdate(networkId: NetworkId, interval: Long, unit: TimeUnit) {
         stationsUpdater = CoroutineScope(Dispatchers.IO).launch {
             while (isActive) {
